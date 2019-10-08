@@ -1,0 +1,30 @@
+.user-avatar__image {
+  width: $user-img-size;
+  height: $user-img-size;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: $spacing;
+  align-self: center;
+}
+
+.user-avatar__initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $user-img-size;
+  height: $user-img-size;
+  font-size: 24px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: $spacing;
+  background: $light-gray;
+  color: $light-font-color;
+  cursor: default;
+}
+
+.user-avatar__image--small, .user-avatar__initials--small {
+  width: $user-avatar-size;
+  height: $user-avatar-size;
+  font-size: 18px;
+  pointer-events: none;
+}

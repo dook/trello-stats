@@ -1,0 +1,64 @@
+.board-user {
+  opacity: 0;
+  animation-name: loadlists;
+  animation-duration: 150ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.board-user__card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 130px;
+  margin-bottom: 2 * $spacing;
+  padding: $spacing * 2;
+  background-color: $white;
+  border-radius: $base-border;
+  box-shadow: $strong-shadow;
+}
+
+.board-user__info {
+  margin-left: $spacing;
+  width: 150px;
+}
+
+.board-user__name {
+  width: 100%;
+  font-size: 1rem;
+  color: $dark-font-color;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.board-user__total {
+  width: 34%;
+  padding: 0;
+  display: inline-block;
+  margin-top: $spacing / 2;
+  color: $light-font-color;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  margin-right: 4px;
+}
+
+.board-user__stats {
+  flex-grow: 1;
+}
+
+.board-user__name--mobile {
+  display: none;
+  margin-left: 10px;
+  font-size: 1.25rem;
+  margin: 0 0 $spacing $spacing;
+}
+
+@include media-breakpoint-s {
+  .board-user__name--mobile {
+    display: block;
+  }
+
+  .board-user__info {
+    display: none;
+  }
+}

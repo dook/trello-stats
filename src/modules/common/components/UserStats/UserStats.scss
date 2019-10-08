@@ -1,0 +1,37 @@
+.board-user__stats__task-bar {
+  margin: $spacing;
+  border-radius: 10px;
+}
+
+.board-user__stats__task-bar--gray {
+  background-color: darken($background-color, 3);
+}
+
+.board-user__stats__task-bar--done, .board-user__stats__task-bar--undone, .board-user__stats__task-bar--todo {
+  height: 24px;
+  border-radius: 10px;
+  color: $white;
+  text-align: left;
+  padding-left: $spacing / 2;
+  font-size: 16px;
+  min-width: 28px;
+}
+
+.board-user__stats__task-bar--done {
+  background-color: $stats-done;
+}
+
+.board-user__stats__task-bar--todo {
+  background-color: $stats-inprogress;
+}
+
+.board-user__stats__task-bar--undone {
+  background-color: $stats-undone;
+}
+
+.task-bar__number {
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 5px;
+}

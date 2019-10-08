@@ -1,0 +1,36 @@
+.searchbar {
+  position: relative;
+  background: $white;
+  border-radius: $base-border;
+  z-index: 1;
+}
+
+.searchbar__input {
+  background: none;
+}
+
+.searchbar__hint {
+  position: absolute;
+  height: 100%;
+  top: -17px;
+  left: 20px;
+  padding: 3 * $spacing 0 2 * $spacing 0;
+  color: $gray;
+  z-index: -1;
+}
+
+.searchbar__hint__span {
+  visibility: hidden;
+}
+
+.input__icon--search {
+  pointer-events: none;
+}
+
+.input__icon--clear {
+  cursor: pointer;
+}
+
+.input__icon--clear:hover {
+  color: $dark-gray;
+}

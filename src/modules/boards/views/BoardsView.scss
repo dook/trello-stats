@@ -1,0 +1,16 @@
+.boards__heading {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: left;
+  color: $header-font-color;
+  margin-bottom: $spacing * 3;
+}
+
+.boards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+  margin-bottom: $spacing * 5;
+}

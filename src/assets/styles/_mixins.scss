@@ -1,0 +1,7 @@
+@mixin media-breakpoint-xs {
+  @media (max-width: $media-breakpoint-xs) { @content; }
+}
+
+@mixin media-breakpoint-s {
+  @media (max-width: $media-breakpoint-s) { @content; }
+}

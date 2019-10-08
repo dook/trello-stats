@@ -1,0 +1,40 @@
+.not-found-view {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+};
+
+.not-found-view__error-number,
+.not-found-view__heading {
+  color: $dark-font-color;
+  font-weight: 400;
+}
+
+.not-found-view__error-number {
+  font-size: 4.75rem;
+  font-weight: 700;
+}
+
+.not-found-view__heading {
+  font-size: 2.375rem;
+  margin: $spacing 0;
+}
+
+.not-found-view__description {
+  color: $light-font-color;
+  margin-bottom: 5 * $spacing;
+}
+
+.not-found-view__button {
+  display: block;
+  margin: 0 auto;
+  padding: 15px;
+  color: $white;
+  background: $primary-color;
+  border-radius: 100px;
+  width: 210px;
+  text-decoration: none;
+  text-transform: uppercase;
+}

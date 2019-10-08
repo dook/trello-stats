@@ -1,0 +1,97 @@
+@import 'variables';
+@import 'mixins';
+@import 'animations';
+
+@import '~modules/common/components/Topbar/Topbar';
+@import '~modules/common/components/Searchbar/Searchbar';
+@import '~modules/common/components/DatePicker/DatePicker';
+@import '~modules/common/components/UserStats/UserStats';
+@import '~modules/common/components/UserAvatar/UserAvatar';
+@import '~modules/auth/views/SignInView/SignInView';
+
+@import '~modules/boards/views/BoardsView';
+@import '~modules/boards/components/Board';
+@import '~modules/boards/views/BoardDetailsView';
+@import '~modules/boards/components/UserDetails';
+@import '~modules/boards/views/SettingsView';
+@import '~modules/boards/components/SettingsModal/ListTile/ListTile';
+
+@import '~modules/common/views/NotFoundView/NotFoundView';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $background-color;
+  font-family: $font, sans-serif;
+}
+
+p, a, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.main {
+  padding: $spacing;
+  min-height: 100vh;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding-top: $topbar-height + 5 * $spacing;
+  position: relative;
+}
+
+.error {
+  color: red;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.header-2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: $header-font-color;
+  margin-bottom: $spacing * 3;
+}
+
+.input, .flatpickr-input {
+  font-size: 1rem;
+  font-family: $font;
+  color: $dark-font-color;
+  font-weight: 400;
+  min-width: 210px;
+  height: $input-height;
+  border: none;
+  border-radius: 16px;
+  padding: $spacing * 2;
+  box-shadow: $strong-shadow;
+  text-align: left;
+  width: 100%;
+  outline: none;
+}
+
+.input__icon {
+  margin-left: 0;
+  position: absolute;
+  right: 15px;
+  color: $gray;
+  z-index: 1;
+  margin-top: $spacing;
+}
+
+.input::placeholder, .flatpickr-input {
+  color: $gray;
+}
+
+.flatpickr-input::placeholder {
+  color: $gray;
+}
+
+@include media-breakpoint-xs {
+  .title--topbar {
+    font-size: 1.25rem;
+  }
+}

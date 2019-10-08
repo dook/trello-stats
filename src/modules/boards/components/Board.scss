@@ -1,0 +1,61 @@
+.board, .board-placeholder {
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+  padding: $spacing;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: $base-shadow;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.board {
+  animation-name: loadlists;
+  animation-duration: 100ms;
+  animation-fill-mode: backwards;
+  transition: transform 0.15s;
+
+  &:hover {
+    filter: brightness(85%);
+  }
+
+  &:active {
+    transform: scale(1.05);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  }
+}
+
+.board-placeholder {
+  background-color: $gray;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-name: loadplaceholders;
+  animation-iteration-count: infinite;
+}
+
+.board__title {
+  color: $white;
+  text-align: left;
+  font-size: 1.125rem;
+  margin-top: 5px;
+  z-index: 1;
+  position: relative;
+}
+
+@include media-breakpoint-xs {
+  .board {
+    width: 100%;
+  }
+}

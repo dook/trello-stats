@@ -1,0 +1,47 @@
+.list-tile {
+  margin-right: $spacing / 2;
+  margin-bottom: $spacing;
+  opacity: 0;
+  animation-name: loadlists;
+  animation-duration: 40ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.list-tile__button {
+  font-family: $font;
+  background: $white;
+  border: none;
+  box-shadow: $strong-shadow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $dark-font-color;
+  padding: 12px 20px;
+  border-radius: $base-border;
+  transition: background-color 0.15s;
+  font-size: 0.875rem;
+  cursor: pointer;
+  outline: none;
+  transition: transform .1s;
+
+  &:hover, &:focus {
+    box-shadow: 0 7px 5px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+  }
+
+  &:active {
+    box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.08);
+    transform: translateY(0);
+  }
+
+  &--active {
+    background: $secondary-color;
+    color: $white;
+
+    &:hover, &:focus {
+      background: darken($secondary-color, 8);
+      border-color: darken($secondary-color, 8);
+    }
+  }
+}

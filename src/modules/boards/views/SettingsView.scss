@@ -1,0 +1,84 @@
+.settings-view {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.settings-category {
+  margin-bottom: 4 * $spacing;
+}
+
+.settings-category__heading {
+  color: $dark-font-color;
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-bottom: 2 * $spacing;
+}
+
+.settings-category__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.settings-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.settings-buttons__button {
+  font-family: $font;
+  border: none;
+  background: $primary-color;
+  color: $white;
+  text-decoration: none;
+  font-size: .875rem;
+  font-weight: 700;
+  border-radius: 100px;
+  outline: none;
+  transition: transform 0.15s;
+  cursor: pointer;
+
+  &--save {
+    padding: 12px 35px;
+    margin-right: $spacing;
+
+    &:hover {
+      background: darken($primary-color, 5);
+    }
+
+    &:disabled {
+      background: $gray;
+      cursor: not-allowed;
+    }
+  }
+
+  &--cancel {
+    box-shadow: none;
+    background: none;
+    color: $dark-font-color;
+    padding: 5px;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &:active {
+    transform: scale(1.1);
+  }
+}
+
+.list-tile-placeholder {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-name: loadplaceholders;
+  animation-iteration-count: infinite;
+  background-color: $gray;
+  padding: $spacing;
+  margin: $spacing / 2 $spacing $spacing / 2 0;
+  height: 40px;
+  width: 120px;
+  border-radius: $base-border;
+}
